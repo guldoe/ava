@@ -35,8 +35,8 @@ function ava_body_data( $classes ) {
 	$header_search            = ( false === get_theme_mod( 'header_search', ava_defaults( 'header_social' ) ) ) ? 'false' : 'true';
 	$product_breadcrumbs      = ( false === get_theme_mod( 'single_product_breadcrumbs', ava_defaults( 'single_product_breadcrumbs' ) ) ) ? 'false' : 'true';
 
-	$classes[] = sprintf(
-		'"
+    print sprintf(
+        '
 	        data-header="%s"
 	        data-top-header="%s"
 	        data-footer="%s"
@@ -52,28 +52,23 @@ function ava_body_data( $classes ) {
 	        data-single-product="%s"
 	        data-product-hover="%s"
 	        data-single-product-breadcrumbs="%s"',
-		esc_attr( $header ),
-		esc_attr( $topheader ),
-		esc_attr( $footer ),
-		esc_attr( $colophon ),
-		esc_attr( $single_sidebar ),
-		esc_attr( $header_mobile_cart ),
-		esc_attr( $header_mobile_search ),
-		esc_attr( $flyout ),
-		esc_attr( $header_checkout_position ),
-		esc_attr( $header_search ),
-		esc_attr( $shop_columns_size ),
-		esc_attr( $flyout_position ),
-		esc_attr( $single_product ),
-		esc_attr( $product_hover ),
-		esc_attr( $product_breadcrumbs )
-	);
-
-	return $classes;
+        esc_attr( $header ),
+        esc_attr( $topheader ),
+        esc_attr( $footer ),
+        esc_attr( $colophon ),
+        esc_attr( $single_sidebar ),
+        esc_attr( $header_mobile_cart ),
+        esc_attr( $header_mobile_search ),
+        esc_attr( $flyout ),
+        esc_attr( $header_checkout_position ),
+        esc_attr( $header_search ),
+        esc_attr( $shop_columns_size ),
+        esc_attr( $flyout_position ),
+        esc_attr( $single_product ),
+        esc_attr( $product_hover ),
+        esc_attr( $product_breadcrumbs )
+    );
 }
-add_filter( 'body_class', 'ava_body_data', 999 );
-
-
 
 if ( ! function_exists( 'ava_get_menu' ) ) :
 	/*
