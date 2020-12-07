@@ -14,7 +14,7 @@
  * @param array $classes Classes for the body element.
  * @return array (Maybe) filtered body classes.
  */
-function ava_body_data( $classes ) {
+function ava_body_data(  ) {
 	/*
      	 * Layout variables used throughout the theme.
      	 * These are all managed through the use of the Customizer API.
